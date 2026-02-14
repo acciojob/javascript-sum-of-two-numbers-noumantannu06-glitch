@@ -1,14 +1,10 @@
-let input1 = prompt("Enter the first number:");
-let input2 = prompt("Enter the second number:");
+// script.js
+let num1 = prompt("Enter first number:");
+let num2 = prompt("Enter second number:");
 
-let num1 = Number(input1);
-let num2 = Number(input2);
-
-if (isNaN(num1) || isNaN(num2)) {
+if (num1 === null || num2 === null || num1.trim() === "" || num2.trim() === "" || isNaN(num1) || isNaN(num2)) {
     alert("Invalid input. Please enter a valid number.");
 } else {
-    let sum = num1 + num2;
+    let sum = parseFloat(num1) + parseFloat(num2);
     alert(`The sum of ${num1} and ${num2} is ${sum}.`);
 }
-
-// Write your code here and print the output using alert function

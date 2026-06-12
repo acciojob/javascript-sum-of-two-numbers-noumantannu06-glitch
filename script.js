@@ -1,17 +1,24 @@
-// script.js
-let num1 = prompt("First number:");
-let num2 = prompt("Second number:");
+// Get first number from user
+const firstNumber = prompt("First number:");
 
+// Get second number from user
+const secondNumber = prompt("Second number:");
+
+// Check if inputs are valid numbers
+// Conditions:
+// 1. firstNumber must not be empty and must be a valid number
+// 2. secondNumber must not be empty and must be a valid number
 if (
-  num1 === null || 
-  num2 === null || 
-  num1.trim() === "" || 
-  num2.trim() === "" || 
-  isNaN(num1) || 
-  isNaN(num2)
+  firstNumber === "" || 
+  secondNumber === "" ||
+  isNaN(Number(firstNumber)) || 
+  isNaN(Number(secondNumber))
 ) {
-  alert("Invalid input. Please enter a valid number.");
+  console.log("Invalid input. Please enter a valid number.");
 } else {
-  let sum = parseFloat(num1) + parseFloat(num2);
-  alert(`The sum of ${num1} and ${num2} is ${sum}.`);
+  // Convert strings to numbers and calculate sum
+  const sum = Number(firstNumber) + Number(secondNumber);
+  
+  // Display the result
+  console.log(`The sum of ${firstNumber} and ${secondNumber} is ${sum}.`);
 }
